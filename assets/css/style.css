@@ -1,0 +1,51 @@
+/* css reset begin */
+body, p, h1, h2, h3, ul, ol, dl, dd, input, select, textarea { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+img { border: none; vertical-align: top; }
+input, textarea { outline: none; -webkit-appearance: none; }
+/* css reset end */
+
+/* public begin */
+.clearfix { zoom: 1; }
+.clearfix:after { display: block; content: ''; clear: both; }
+body, html { width: 100%; height: 100%; overflow: hidden; }
+body { font-size: 14px; font-family: "微软雅黑",arial; }
+/* public end */
+
+#main { width: 100%; height: 100%; position: relative; left: 0; top: 0; -webkit-transform:transition3d(0,0,0); transform:transition3d(0,0,0); }
+
+#main .page { width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 5; display: none; overflow: hidden; } 
+#main .page1 { background: url(../img/page_01.jpg) no-repeat center center; background-size: 100% 100%; display: block; }
+#main .page2 { background: url(../img/page_02.jpg) no-repeat center center; background-size: 100% 100%; }
+#main .zIndex { z-index: 6; }
+
+/* arrow-up begin */
+.arrow-up { position: absolute; z-index: 999; left: 0; right: 0; text-align: center; -webkit-animation: pageUp 1.5s both infinite; animation: pageUp 1.5s both infinite; }
+@-webkit-keyframes pageUp{
+    from{
+        bottom: 5px;
+        opacity: 0;
+    }
+    to{
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+@keyframes pageUp{
+    from{
+        bottom: 5px;
+        opacity: 0;
+    }
+    to{
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+/* arrow-up end */
+
+/* 竖屏检测 begin */
+.mod-orient-layer { display: none; position: fixed; height: 100%; width: 100%; left: 0; top: 0; background: #000; z-index: 9999; }
+.mol_content { position: absolute; width: 100%; top: 45%; text-align: center; }
+.mol_desc { margin-top: 20px; font-size: 15px; color: #fff; }
+/* 竖屏检测 end */
